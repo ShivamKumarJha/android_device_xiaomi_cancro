@@ -69,7 +69,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_atomic \
     android.hardware.power@1.0-impl \
-    power.msm8974
+    power.cancro
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/changepowermode.sh:$(TARGET_COPY_OUT_VENDOR)/bin/changepowermode.sh
