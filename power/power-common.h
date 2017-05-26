@@ -37,6 +37,9 @@
 #define GO_HISPEED_LOAD_PATH "/sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load"
 #define INPUT_BOOST_MS_PATH "/sys/module/cpu_boost/parameters/input_boost_ms"
 
+#define GPIO_KEYS_POWER_1 "/sys/class/input/input1/enabled"
+#define GPIO_KEYS_POWER_2 "/sys/class/input/input2/enabled"
+
 #define ONDEMAND_GOVERNOR "ondemand"
 #define INTERACTIVE_GOVERNOR "interactive"
 #define MSMDCVS_GOVERNOR "msm-dcvs"

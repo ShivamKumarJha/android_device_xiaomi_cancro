@@ -270,6 +270,10 @@ void set_interactive(struct power_module *module, int on)
         goto out;
     }
 
+    ALOGD("%s: %s input devices", __func__, on ? "enabling" : "disabling");
+    sysfs_write(GPIO_KEYS_POWER_1, on ? "1" : "0");
+    sysfs_write(GPIO_KEYS_POWER_2, on ? "1" : "0");
+
     if (!on) {
         /* Display off. */
         if ((strncmp(governor, ONDEMAND_GOVERNOR, strlen(ONDEMAND_GOVERNOR)) == 0) &&
