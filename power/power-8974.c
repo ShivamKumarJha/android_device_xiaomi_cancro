@@ -71,25 +71,50 @@ inline static void set_thermal_profile(int profile) {
 			sysfs_write( "/sys/kernel/msm_thermal/enabled", "0");
 			sysfs_write( "/sys/kernel/msm_thermal/zone0", "2265600 45 5");
 			sysfs_write( "/sys/kernel/msm_thermal/zone1", "2265600 50 46");
-			sysfs_write( "/sys/kernel/msm_thermal/zone2", "1958400 55 51");
-			sysfs_write( "/sys/kernel/msm_thermal/zone3", "1728000 60 56");
-			sysfs_write( "/sys/kernel/msm_thermal/zone4", "1497600 65 61");
-			sysfs_write( "/sys/kernel/msm_thermal/zone5", "1267200 70 66");
-			sysfs_write( "/sys/kernel/msm_thermal/zone6", "1036800 75 71");
-			sysfs_write( "/sys/kernel/msm_thermal/zone7", "960000 99 76");
+			sysfs_write( "/sys/kernel/msm_thermal/zone2", "2265600 55 51");
+			sysfs_write( "/sys/kernel/msm_thermal/zone3", "2265600 60 56");
+			sysfs_write( "/sys/kernel/msm_thermal/zone4", "2265600 65 61");
+			sysfs_write( "/sys/kernel/msm_thermal/zone5", "2265600 70 66");
+			sysfs_write( "/sys/kernel/msm_thermal/zone6", "1728000 95 71");
+			sysfs_write( "/sys/kernel/msm_thermal/zone7", "652800 99 96");
 			sysfs_write( "/sys/kernel/msm_thermal/enabled", "1");
 			
 			/* adreno part*/
 			sysfs_write( "/sys/module/adreno_idler/parameters/adreno_idler_active", "N");			
 			sysfs_write( "/sys/class/kgsl/kgsl-3d0/force_bus_on", "1");
+			sysfs_write( "/sys/class/kgsl/kgsl-3d0/bus_split", "0");
 			sysfs_write( "/sys/class/kgsl/kgsl-3d0/force_rail_on", "1");
 			sysfs_write( "/sys/class/kgsl/kgsl-3d0/force_clk_on", "1");
 			sysfs_write( "/sys/class/kgsl/kgsl-3d0/devfreq/governor", "performance");
 			sysfs_write( "/sys/class/kgsl/kgsl-3d0/idle_timer", "1000000");
-			
 			sysfs_write( "/sys/devices/system/cpu/sched_mc_power_savings", "0");
+
+        }
+		else if (profile == PROFILE_BIAS_POWER || profile == PROFILE_POWER_SAVE){
+			/* change thermal zones*/
+			sysfs_write( "/sys/kernel/msm_thermal/enabled", "0");
+			sysfs_write( "/sys/kernel/msm_thermal/zone0", "1728000 45 5");
+			sysfs_write( "/sys/kernel/msm_thermal/zone1", "1497600 50 46");
+			sysfs_write( "/sys/kernel/msm_thermal/zone2", "1267200 55 51");
+			sysfs_write( "/sys/kernel/msm_thermal/zone3", "1036800 60 56");
+			sysfs_write( "/sys/kernel/msm_thermal/zone4", "883200 65 61");
+			sysfs_write( "/sys/kernel/msm_thermal/zone5", "729600 70 66");
+			sysfs_write( "/sys/kernel/msm_thermal/zone6", "652800 75 71");
+			sysfs_write( "/sys/kernel/msm_thermal/zone7", "652800 99 76");
+			sysfs_write( "/sys/kernel/msm_thermal/enabled", "1");
 			
-        } else {
+			/* adreno part*/
+			sysfs_write( "/sys/module/adreno_idler/parameters/adreno_idler_active", "Y");			
+			sysfs_write( "/sys/class/kgsl/kgsl-3d0/force_bus_on", "0");
+			sysfs_write( "/sys/class/kgsl/kgsl-3d0/bus_split", "1");
+			sysfs_write( "/sys/class/kgsl/kgsl-3d0/force_rail_on", "0");
+			sysfs_write( "/sys/class/kgsl/kgsl-3d0/force_clk_on", "0");
+			sysfs_write( "/sys/class/kgsl/kgsl-3d0/devfreq/governor", "msm-adreno-tz");
+			sysfs_write( "/sys/class/kgsl/kgsl-3d0/idle_timer", "80");
+			sysfs_write( "/sys/devices/system/cpu/sched_mc_power_savings", "1");
+
+		}
+        else {
 			/* change thermal zones*/
 			sysfs_write( "/sys/kernel/msm_thermal/enabled", "0");
 			sysfs_write( "/sys/kernel/msm_thermal/zone0", "1958400 45 5");
@@ -111,7 +136,6 @@ inline static void set_thermal_profile(int profile) {
 			sysfs_write( "/sys/class/kgsl/kgsl-3d0/idle_timer", "80");
 			
 			sysfs_write( "/sys/devices/system/cpu/sched_mc_power_savings", "1");
-
 		}		
 }
 

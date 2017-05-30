@@ -249,6 +249,7 @@ on boot
     chown system system /sys/module/adreno_idler/parameters/adreno_idler_active
     chown system system /sys/class/kgsl/kgsl-3d0/force_bus_on
     chown system system /sys/class/kgsl/kgsl-3d0/force_rail_on
+    chown system system /sys/class/kgsl/kgsl-3d0/bus_split
     chown system system /sys/class/kgsl/kgsl-3d0/force_clk_on
     chown system system /sys/class/kgsl/kgsl-3d0/devfreq/governor
     chown system system /sys/class/kgsl/kgsl-3d0/idle_timer			
