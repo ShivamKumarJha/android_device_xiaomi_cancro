@@ -199,6 +199,9 @@ endif
 # Lineage Hardware
 BOARD_HARDWARE_CLASS := $(DEVICE_PATH)/lineagehw
 
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # GPS HAL lives here
 TARGET_GPS_HAL_PATH         := $(DEVICE_PATH)/gps
 TARGET_PROVIDES_GPS_LOC_API := true
