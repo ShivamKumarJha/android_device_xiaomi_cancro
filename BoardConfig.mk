@@ -73,12 +73,8 @@ TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_PATH)/init/init_cancro.cpp
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE            := true
-
-# Power
-TARGET_HAS_LEGACY_POWER_STATS := true
-TARGET_HAS_NO_WIFI_STATS := true
-TARGET_USES_INTERACTION_BOOST := true
-TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(DEVICE_PATH)/power/power_ext.c
+TARGET_POWERHAL_VARIANT             := qcom
+TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(LOCAL_PATH)/power/power_ext.c
 
 # Audio (old)
 BOARD_USES_ALSA_AUDIO                      := true
