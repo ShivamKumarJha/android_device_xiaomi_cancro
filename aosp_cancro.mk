@@ -20,18 +20,20 @@ TARGET_SCREEN_WIDTH := 1080
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PE stuff.
+TARGET_ARCH := arm
+TARGET_DENSITY := xxhdpi
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_ARCORE := true
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit from cancro device
 $(call inherit-product, device/xiaomi/cancro/cancro.mk)
 
-PRODUCT_NAME := lineage_cancro
+PRODUCT_NAME := aosp_cancro
 PRODUCT_DEVICE := cancro
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := MI Cancro
-
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
 TARGET_CONTINUOUS_SPLASH_ENABLED := true

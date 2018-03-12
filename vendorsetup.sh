@@ -1,0 +1,3 @@
+add_lunch_combo aosp_cancro-eng
+add_lunch_combo aosp_cancro-user
+add_lunch_combo aosp_cancro-userdebug

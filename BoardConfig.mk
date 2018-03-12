@@ -18,6 +18,9 @@ BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/cancro
 
+# Allow Missing Dependencies
+ALLOW_MISSING_DEPENDENCIES=true
+
 # ReleaseTools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_cancro
@@ -219,6 +222,9 @@ TARGET_LEGACY_HW_DISK_ENCRYPTION := true
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
+
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 # Remove secdiscard command
 TARGET_REMOVE_SECDISCARD_COMMAND := true
