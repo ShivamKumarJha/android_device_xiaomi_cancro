@@ -1,8 +1,0 @@
-allow netmgrd shell_exec:file { getattr read open execute execute_no_trans };
-allow netmgrd net_data_file:dir { open read getattr };
-allow netmgrd toolbox_exec:file { open read getattr execute execute_no_trans };
-allow netmgrd self:capability { dac_override };
-allow netmgrd netd_socket:sock_file rw_file_perms;
-allow netmgrd socket_device:dir { add_name write };
-allow netmgrd socket_device:sock_file { create };
-allow netmgrd fs:file { lock };

@@ -1,1 +1,0 @@
-allow hal_allocator sysfs:file { open read getattr };

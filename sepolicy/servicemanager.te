@@ -1,3 +1,0 @@
-allow servicemanager rild:file r_file_perms;
-allow servicemanager rild:dir { search };
-allow servicemanager rild:process { getattr };

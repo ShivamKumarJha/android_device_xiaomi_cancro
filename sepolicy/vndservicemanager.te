@@ -1,1 +1,0 @@
-allow vndservicemanager sysfs:file { open read getattr };

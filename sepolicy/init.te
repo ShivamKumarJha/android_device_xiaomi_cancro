@@ -1,9 +1,0 @@
-allow init socket_device:sock_file create;
-allow init socket_device:sock_file setattr;
-allow init proc_touchpanel:file write;
-allow init tmpfs:lnk_file create_file_perms;
-
-allow init { domain -lmkd -crash_dump }:process noatsecure;
-
-#avc: denied { write } for name="property_service" dev="tmpfs" ino=6231 scontext=u:r:init:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
-allow init property_socket:sock_file { write };

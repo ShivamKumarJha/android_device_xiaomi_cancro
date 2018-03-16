@@ -1,2 +1,0 @@
-allow mediacodec sysfs:file { open read getattr };
-allow mediacodec system_server:fifo_file { append };

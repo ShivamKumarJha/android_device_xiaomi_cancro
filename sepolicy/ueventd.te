@@ -1,7 +1,0 @@
-allow ueventd vfat:dir search;
-allow ueventd vfat:file { read open };
-allow ueventd vfat:file getattr;
-allow ueventd firmware_file:dir { search };
-allow ueventd firmware_file:file { getattr open read };
-allow ueventd qseecom_device:dir { relabelto };
-allow ueventd qseecom_device:filesystem { associate };

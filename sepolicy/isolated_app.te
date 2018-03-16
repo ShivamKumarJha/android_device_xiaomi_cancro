@@ -1,3 +1,0 @@
-allow isolated_app shell_data_file:dir { search };
-allow isolated_app sysfs:file { open read getattr };
-allow isolated_app sysfs:dir { open read getattr };

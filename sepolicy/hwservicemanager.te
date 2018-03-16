@@ -1,2 +1,0 @@
-allow hwservicemanager sysfs:file { open read getattr };
-allow hwservicemanager sockets:dir { search };

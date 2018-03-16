@@ -1,2 +1,0 @@
-allow mediaextractor sysfs:file { open read getattr };
-allow mediaextractor fuse:file { open read getattr };

@@ -1,1 +1,0 @@
-allow rfs_access sysfs:file { read open getattr };

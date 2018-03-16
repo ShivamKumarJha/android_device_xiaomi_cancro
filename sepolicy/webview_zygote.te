@@ -1,2 +1,0 @@
-allow webview_zygote sysfs:file { open read getattr };
-allow webview_zygote mnt_expand_file:dir { getattr };

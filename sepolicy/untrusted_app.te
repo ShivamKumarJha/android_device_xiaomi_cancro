@@ -1,4 +1,0 @@
-allow untrusted_app rootfs:dir { read };
-allow untrusted_app mnt_media_rw_file:dir { getattr };
-allow untrusted_app sysfs:file r_file_perms;
-allow untrusted_app lock_settings_service:service_manager { find };

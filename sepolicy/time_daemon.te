@@ -1,2 +1,0 @@
-allow time_daemon sysfs:file { open read getattr };
-allow time_daemon system_data_file:file { open read getattr };

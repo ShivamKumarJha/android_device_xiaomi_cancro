@@ -1,2 +1,0 @@
-allow qmuxd sysfs:file { open read getattr };
-allow qmuxd diag_device:chr_file { open read write };

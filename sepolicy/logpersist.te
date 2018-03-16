@@ -1,4 +1,0 @@
-allow logpersist sysfs:file { open read getattr };
-allow logpersist misc_logd_file:file { rw_file_perms unlink };
-allow logpersist misc_logd_file:dir { remove_name };
-allow logpersist self:capability { dac_override };

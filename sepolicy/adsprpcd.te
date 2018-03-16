@@ -1,1 +1,0 @@
-allow adsprpcd sysfs:file { open read getattr };
