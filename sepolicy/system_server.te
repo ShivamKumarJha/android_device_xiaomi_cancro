@@ -1,0 +1,2 @@
+#============= system_server ==============
+allow system_server crash_dump:process getpgid;

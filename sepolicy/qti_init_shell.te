@@ -1,0 +1,6 @@
+#============= qti_init_shell ==============
+allow qti_init_shell ctl_default_prop:property_service set;
+allow qti_init_shell persist_misc_file:file { getattr setattr write };
+allow qti_init_shell proc_net:dir { open read };
+allow qti_init_shell rootfs:dir { open read };
+allow qti_init_shell toolbox_exec:file getattr;

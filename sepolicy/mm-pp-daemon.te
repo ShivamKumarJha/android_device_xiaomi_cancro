@@ -1,0 +1,4 @@
+#============= mm-pp-daemon ==============
+allow mm-pp-daemon ion_device:chr_file write;
+allow mm-pp-daemon sysfs:file { getattr open read write };
+allow mm-pp-daemon system_prop:property_service set;

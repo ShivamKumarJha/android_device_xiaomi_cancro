@@ -1,0 +1,3 @@
+#============= charger_monitor ==============                                                                                                                                                                                      
+allow charger_monitor sysfs:file read;                                                                                                                                                                                                   
+allow charger_monitor sysfs_spmi_dev:dir { open read };  

@@ -1,0 +1,17 @@
+#============= toolbox ==============
+allow toolbox ctl_netmgrd_prop:property_service set;
+allow toolbox ctl_qmuxd_prop:property_service set;
+allow toolbox default_prop:property_service set;
+allow toolbox init:fifo_file { getattr write };
+allow toolbox init:unix_stream_socket connectto;
+allow toolbox mpdecision_prop:property_service set;
+allow toolbox property_socket:sock_file write;
+allow toolbox self:capability { chown fowner fsetid };
+allow toolbox serialno_prop:file { getattr open read };
+allow toolbox sysfs:file { getattr setattr };
+allow toolbox sysfs_cpu_boost:dir search;
+allow toolbox sysfs_cpu_boost:file { getattr setattr };
+allow toolbox sysfs_devices_system_cpu:file setattr;
+allow toolbox sysfs_graphics:file { getattr open read setattr };
+allow toolbox sysfs_wake_lock:file { getattr setattr };
+allow toolbox system_prop:property_service set;
