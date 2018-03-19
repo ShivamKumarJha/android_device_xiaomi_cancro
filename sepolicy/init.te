@@ -1,4 +1,2 @@
 #============= init ==============
-allow init rootfs:file execute_no_trans;
-allow init shell_exec:file execute_no_trans;
 allow init vfat:dir mounton;
