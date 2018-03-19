@@ -1,2 +1,2 @@
 #============= platform_app ==============
-allow platform_app qemu_hw_mainkeys_prop:file { getattr open };
+allow platform_app qemu_hw_mainkeys_prop:file { getattr open read};

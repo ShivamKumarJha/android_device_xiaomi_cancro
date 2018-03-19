@@ -1,0 +1,2 @@
+#============= bluetooth_loader ==============
+allow bluetooth_loader shell_exec:file entrypoint;
