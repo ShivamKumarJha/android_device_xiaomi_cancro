@@ -128,12 +128,12 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.nfc</name>
-	<transport>hwbinder</transport>
+        <transport>hwbinder</transport>
         <version>1.0</version>
-    <interface>
+        <interface>
             <name>INfc</name>
             <instance>default</instance>
-    </interface>
+        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.power</name>

@@ -26,8 +26,7 @@ if [ $RAW_ID == 1974 ] || [ $RAW_ID == 1973 ] || [ $RAW_ID == 1972 ]; then
     rm -rf /system/priv-app/Tag
     rm -rf /system/vendor/etc/*nfc*
     rm -rf /system/vendor/etc/permissions/*nfc*
-    rm -rf /system/vendor/firmware/BCM2079*
-    rm -rf /system/vendor/firmware/PreI2C_v470.ncd
+    rm -rf /system/vendor/firmware/*bcm*
     rm -rf /system/vendor/lib/hw/android.hardware.nfc@*
     rm -rf /system/vendor/lib/hw/nfc_nci.bcm2079x.default.so
     rm -rf /system/vendor/bin/hw/android.hardware.nfc@*
