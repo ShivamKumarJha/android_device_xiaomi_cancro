@@ -68,6 +68,15 @@ on post-fs-data
     chmod 777 /data/qmi-framework-tests/qmi_xiaomi_id_test
     mkdir /persist/property 0700 root root
 
+    chmod 0600 /dev/bcm2079x
+    chown nfc nfc /dev/bcm2079x
+    mkdir /data/nfc
+    mkdir /data/nfc/param
+    chmod 0700 /data/nfc
+    chmod 0700 /data/nfc/param
+    chown nfc nfc /data/nfc
+    chown nfc nfc /data/nfc/param
+
     chown system system /dev/sysmatdrv
     chmod 0660 /dev/sysmatdrv
 
@@ -146,6 +155,17 @@ on property:persist.usb.chgdisabled=1
 
 on property:persist.usb.chgdisabled=0
     write /sys/class/power_supply/battery/charging_enabled 1
+
+# NFC
+   setprop ro.nfc.port "I2C"
+    chmod 0600 /dev/bcm2079x
+    chown nfc nfc /dev/bcm2079x
+    mkdir /data/nfc
+    mkdir /data/nfc/param
+    chmod 0700 /data/nfc
+    chmod 0700 /data/nfc/param
+    chown nfc nfc /data/nfc
+    chown nfc nfc /data/nfc/param
 
 #start camera server as daemon
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
