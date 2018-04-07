@@ -80,7 +80,7 @@ PRODUCT_PACKAGES += \
 
 #USB HAL
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
+    android.hardware.usb@1.0-service.xiaomi_msm8974
 
 # WiFi
 PRODUCT_COPY_FILES += \

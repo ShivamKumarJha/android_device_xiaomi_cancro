@@ -75,18 +75,23 @@ ro.qc.sdk.gestures.camera=false
 ro.qc.sdk.camera.facialproc=false
 
 # Audio
-persist.speaker.prot.enable=true
-qcom.hw.aac.encoder=true
-tunnel.audio.encode = false
+#persist.speaker.prot.enable=true
+#qcom.hw.aac.encoder=true
+#tunnel.audio.encode = false
 
 persist.audio.init_volume_index=1
+af.fast_track_multiplier=1
+audio_hal.period_size=192
+
+persist.audio.vns.mode=2
 
 # Audio offload
 audio.offload.buffer.size.kb=32
-av.offload.enable=true
-audio.offload.video=true
-audio.offload.gapless.enabled=true
-audio.offload.disable=0
+#av.offload.enable=true
+#audio.offload.video=true
+audio.offload.video=false
+#audio.offload.gapless.enabled=true
+#audio.offload.disable=0
 use.voice.path.for.pcm.voip=true
 persist.audio.dirac.speaker = true
 persist.audio.camcorder.stereo = true
@@ -99,7 +104,8 @@ ro.qc.sdk.audio.ssr=false
 ro.qc.sdk.audio.fluencetype=fluence
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
-persist.audio.fluence.speaker=true
+#persist.audio.fluence.speaker=true
+persist.audio.fluence.speaker=false
 
 # Enalbe modem fast dormancy function
 persist.env.fastdorm.enabled=true
