@@ -610,7 +610,7 @@ on property:usb_uicc.spi_bridge_enabled=0
 service charger /sbin/chargeonlymode
     class charger
     group system graphics
-    seclabel u:r:chargeonlymode:s0
+    seclabel u:r:charger:s0
 
 # SSR setting
 on property:persist.sys.ssr.restart_level=*
